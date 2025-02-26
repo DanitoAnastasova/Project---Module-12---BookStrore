@@ -1,4 +1,4 @@
-﻿namespace BookStore.Models
+namespace BookStore.Models
 {
     public class SeedData
     {
@@ -14,69 +14,69 @@
                 context.Books.AddRange(
                     new Book
                     {
-                        Title = "",
-                        Language = "",
-                        ISBN = "",
-                        DatePublished = DateTime.Parse("2013-9-26"),
-                        Price = 0,
-                        Author = "",
-                        ImageUrl = ""
+                        Title = "Силоз (Силоз 1)",
+                        Language = "Български",
+                        ISBN = "9786191933099",
+                        DatePublished = DateTime.Parse("2012-1-27"),
+                        Price = 30,
+                        Author = "Хю Хауи",
+                        ImageUrl = "\"C:\\Users\\dania\\OneDrive\\Документи\\Programming projects\\Images for BookStore projects\\siloz-siloz-1-30.jpg\""
+                    },
+
+                    new Book
+                    {
+                        Title = "Смъртоносна игра",
+                        Language = "Български",
+                        ISBN = "9786190215417",
+                        DatePublished = DateTime.Parse("2024-12-6"),
+                        Price = 24,
+                        Author = "Майкъл Кейн",
+                        ImageUrl = "\"C:\\Users\\dania\\OneDrive\\Документи\\Programming projects\\Images for BookStore projects\\smartonosna-igra-maykal-keyn-30.jpg\""
+                    },
+
+                    new Book
+                    {
+                        Title = "Основи на биткойн и блокчейн. Въведение в криптовалутите и технологията, която ги движи",
+                        Language = " Български",
+                        ISBN = "\t9786197080360",
+                        DatePublished = DateTime.Parse("2023"),
+                        Price = 25,
+                        Author = "Антъни Луис",
+                        ImageUrl = "\"C:\\Users\\dania\\OneDrive\\Документи\\Programming projects\\Images for BookStore projects\\osnovi-na-bitkoyn-i-blokcheyn-vavedenie-v-kriptovalutite-i-tehnologiyata--koyato-gi-dvizhi-30.jpg\""
+                    },
+
+                    new Book
+                    {
+                        Title = "Ерата на изкуствения интелект и нашето човешко бъдеще",
+                        Language = "Български",
+                        ISBN = "9789543988334",
+                        DatePublished = DateTime.Parse("2024-6-14"),
+                        Price = 45,
+                        Author = "Даниел Хутенлохер, Ерик Шмит, Хенри Кисинджър",
+                        ImageUrl = "\"C:\\Users\\dania\\OneDrive\\Документи\\Programming projects\\Images for BookStore projects\\erata-na-izkustveniya-intelekt-i-nasheto-choveshko-badeshte-30.jpg\""
+                    },
+
+                    new Book
+                    {
+                        Title = "Marvel: Супер истории - том 1",
+                        Language = "Български",
+                        ISBN = "9786197733310",
+                        DatePublished = DateTime.Parse("2024"),
+                        Price = 22,
+                        Author = "Колектив",
+                        ImageUrl = "\"C:\\Users\\dania\\OneDrive\\Документи\\Programming projects\\Images for BookStore projects\\marvel--super-istorii---tom-1-30.jpg\""
+                    },
+
+                    new Book
+                    {
+                        Title = "Ефективно програмиране със C#",
+                        Language = "Български",
+                        ISBN = "9789546564528",
+                        DatePublished = DateTime.Parse("2022"),
+                        Price = 22,
+                        Author = "Бил Уогнър",
+                        ImageUrl = "\"C:\\Users\\dania\\OneDrive\\Документи\\Programming projects\\Images for BookStore projects\\efektivno-programirane-sas-c-30.jpg\""
                     }
-
-                    //new Book
-                    //{
-                    //    Title = "The Fellowship of the Ring",
-                    //    Language = "English",
-                    //    ISBN = "9780261102354",
-                    //    DatePublished = DateTime.Parse("1991-7-4"),
-                    //    Price = 100,
-                    //    Author = "J. R. R. Tolkien",
-                    //    ImageUrl = "/images/lotr.jpg"
-                    //},
-
-                    //new Book
-                    //{
-                    //    Title = "Mystic River",
-                    //    Language = "English",
-                    //    ISBN = "9780062068408",
-                    //    DatePublished = DateTime.Parse("2011-6-1"),
-                    //    Price = 91,
-                    //    Author = "Dennis Lehane",
-                    //    ImageUrl = "/images/mystic-river.jpg"
-                    //},
-
-                    //new Book
-                    //{
-                    //    Title = "Of Mice and Men",
-                    //    Language = "English",
-                    //    ISBN = "9780062068408",
-                    //    DatePublished = DateTime.Parse("1994-1-2"),
-                    //    Price = 166,
-                    //    Author = "John Steinbeck",
-                    //    ImageUrl = "/images/of-mice-and-men.jpg"
-                    //},
-
-                    //new Book
-                    //{
-                    //    Title = "The Old Man and the Sea",
-                    //    Language = "English",
-                    //    ISBN = "9780062068408",
-                    //    DatePublished = DateTime.Parse("1994-8-18"),
-                    //    Price = 84,
-                    //    Author = "Ernest Hemingway",
-                    //    ImageUrl = "/images/old-man-and-the-sea.jpg"
-                    //},
-
-                    //new Book
-                    //{
-                    //    Title = "The Road",
-                    //    Language = "English",
-                    //    ISBN = "9780307386458",
-                    //    DatePublished = DateTime.Parse("2007-5-1"),
-                    //    Price = 95,
-                    //    Author = "Cormac McCarthy",
-                    //    ImageUrl = "/images/the-road.jpg"
-                    //}
                 );
 
                 context.SaveChanges();
