@@ -1,3 +1,7 @@
+using BookStore.Models;
+using BookStore.Repositories;
+using BookStore.Services;
+
 namespace BookStore
 {
     public class Program
@@ -9,21 +13,30 @@ namespace BookStore
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // Register ApplicationDbContext with SQL Server
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            // Register Repositories
+            builder.Services.AddScoped<IBookRepository, BookRepository>();
+            builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+            // Register Services
+            builder.Services.AddScoped<IBookService, BookService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
-
             app.UseAuthorization();
 
             app.MapControllerRoute(
@@ -34,3 +47,4 @@ namespace BookStore
         }
     }
 }
+
